@@ -1,0 +1,28 @@
+<html ng-app="JuegoCartas">
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="codigos/app.js"></script>
+    <script src="codigos/Carta.js"></script>
+    <title>Juego de Cartas Angularjs 1</title>
+    <link rel="stylesheet" href="Estilos/Estilos.css">
+</head>
+
+<body ng-controller="ControlJuego">
+    <div class="botones">
+        <button id="btRepartir" ng-click="repartir()" class="boton">Repartir</button>
+        <button id="btVerificar" ng-click="verificar()" class="boton">Verificar</button>
+        <!--<ng-a id="btnRepartir" href="#" ng-click="repartir()" class="boton">Repartir</a>
+           <ng-a id="btnVerificar" href="#" ng-click="verificar()" class="boton">Verificar</a>--> 
+    </div>
+
+    <div id="Mesa">
+        <ul>
+            <li ng-repeat="carta in cartas" class="carta">
+                <img src="{{carta.obtenerImagen()}}" title="{{carta.obtenerNombre()}} de {{carta.obtenerPinta()}}"/>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
